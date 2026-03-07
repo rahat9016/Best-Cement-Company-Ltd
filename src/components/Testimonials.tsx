@@ -24,7 +24,7 @@ export default function Testimonials() {
 
   return (
     <section className="bg-light pt-[90px] pb-[80px]">
-      <div className="site-container">
+      <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>
             <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section id="about" className="bg-white pt-[90px] pb-[80px]">
-      <div className="site-container">
+      <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
           <div className="relative">

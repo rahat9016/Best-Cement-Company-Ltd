@@ -1,6 +1,7 @@
 "use client";
 
-import { ChevronDown, Leaf, Menu, X } from "lucide-react";
+import { Leaf, Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -19,8 +20,8 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: "#home", active: true },
     { label: "About Us", href: "#about", active: false },
-    { label: "Services", href: "#services", active: false, hasDropdown: true },
-    { label: "Page", href: "#", active: false, hasDropdown: true },
+    { label: "Services", href: "#services", active: false },
+    { label: "Projects", href: "#projects", active: false },
     { label: "Contact Us", href: "#contact", active: false },
   ];
 
@@ -32,58 +33,56 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="site-container flex items-center justify-between h-[80px]">
+      <div className="container flex items-center justify-between h-[80px]">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5">
           <Leaf size={28} className="text-primary" fill="#009dab" />
           <span
             className={`font-heading font-bold text-xl tracking-tight transition-colors duration-300 ${
-              scrolled ? "text-white" : "text-white"
+              scrolled ? "text-primary" : "text-white"
             }`}
           >
             Concretize
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex items-center gap-7">
           {navLinks.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
-              className={`text-sm font-medium transition-colors duration-300 flex items-center gap-1 ${
+              className={`text-base font-medium transition-colors duration-300 flex items-center gap-1 ${
                 item.active
                   ? "text-primary"
                   : scrolled
-                    ? "text-white/70 hover:text-primary"
+                    ? "text-dark/70 hover:text-primary"
                     : "text-white/70 hover:text-primary"
               }`}
             >
               {item.label}
-              {item.hasDropdown && (
-                <ChevronDown size={10} strokeWidth={2.5} />
-              )}
-            </a>
+              
+            </Link>
           ))}
         </div>
 
         {/* CTA Button */}
-        <a
+        <Link
           href="#contact"
           className={`hidden lg:inline-flex items-center px-7 py-3 font-heading font-semibold text-sm rounded-full transition-all duration-300 ${
             scrolled
               ? "bg-primary text-white hover:bg-primary-dark"
-              : "bg-dark text-white border border-white/10 hover:bg-primary hover:text-white"
+              : "bg-primary text-white hover:bg-primary-dark"
           }`}
         >
           Talk to Our Team
-        </a>
+        </Link>
 
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`lg:hidden p-2 transition-colors duration-300 ${
-            scrolled ? "text-white" : "text-white"
+            scrolled ? "text-dark" : "text-white"
           }`}
           aria-label="Toggle menu"
           id="mobile-menu-toggle"
@@ -106,29 +105,29 @@ export default function Navbar() {
           }`}
         >
           {navLinks.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               onClick={() => setIsOpen(false)}
               className={`block py-3 text-sm font-medium border-b transition-colors ${
                 scrolled
-                  ? `border-dark/5 ${item.active ? "text-primary" : "text-white/70 hover:text-primary"}`
+                  ? `border-dark/5 ${item.active ? "text-primary" : "text-dark/70 hover:text-primary"}`
                   : `border-white/5 ${item.active ? "text-primary" : "text-white/70 hover:text-primary"}`
               }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="#contact"
             className={`mt-4 inline-flex items-center px-7 py-3 font-heading font-semibold text-sm rounded-full border ${
               scrolled
                 ? "bg-primary text-white border-primary"
-                : "bg-dark text-white border-white/10"
+                : "bg-primary text-white border-primary"
             }`}
           >
             Talk to Our Team
-          </a>
+          </Link>
         </div>
       )}
     </nav>

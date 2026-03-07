@@ -15,7 +15,7 @@ export default function CTASection() {
         <div className="absolute inset-0 bg-dark/80" />
       </div>
 
-      <div className="relative z-10 site-container text-center">
+      <div className="relative z-10 container text-center">
         <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">
           Ready to Build?
         </p>

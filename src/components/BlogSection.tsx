@@ -31,7 +31,7 @@ export default function BlogSection() {
 
   return (
     <section id="blog" className="bg-dark pt-[90px] pb-[80px]">
-      <div className="site-container">
+      <div className="container">
         <div className="text-center mb-12">
           <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">
             Our Blog

@@ -27,7 +27,7 @@ export default function ProjectsSection() {
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 100%)" }}
       />
 
-      <div className="site-container">
+      <div className="container">
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>

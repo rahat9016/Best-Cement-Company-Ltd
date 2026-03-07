@@ -90,7 +90,7 @@ export default function HeroSection() {
       ))}
 
       {/* Content inside container */}
-      <div className="relative z-10 site-container flex-1 flex flex-col justify-center items-start">
+      <div className="relative z-10 container flex-1 flex flex-col justify-center items-start">
         <div className="flex items-center gap-8 lg:gap-14 py-16 lg:py-0">
           {/* Left vertical label */}
           <div className="hidden lg:flex flex-col items-center pt-4">
@@ -104,20 +104,19 @@ export default function HeroSection() {
           </div>
 
           {/* Center content */}
-          <div className="max-w-2xl">
-            <h1 className="font-heading font-extrabold text-[42px] md:text-[52px] lg:text-[62px] leading-[1.1] text-white mb-6">
+          <div className="max-w-4xl">
+            <h1 className="font-heading font-extrabold text-[42px] md:text-[52px] lg:text-[64px] leading-[1.1] text-white mb-6">
               Residential &amp;<br />
-              Commercial Solutions<br />
-              Built To Last
+              Commercial Solutions Built To Last
             </h1>
-            <p className="text-white/50 text-base md:text-lg leading-relaxed max-w-lg mb-8">
+            <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-lg mb-8">
               We deliver expert concrete services including driveways, slabs,
               and foundations — backed by years of experience, safety
               compliance, and guaranteed quality.
             </p>
             <Link
               href="#contact"
-              className="inline-flex items-center px-12 py-3.5 bg-primary text-white font-heading font-bold text-sm rounded-md hover:bg-primary-dark transition-colors duration-300 h-10"
+              className="inline-flex items-center px-12 py-3.5 bg-primary text-white font-heading font-bold text-sm rounded-md hover:bg-primary-dark transition-colors duration-300 h-12"
             >
               Get a Free Quote
             </Link>
@@ -132,7 +131,7 @@ export default function HeroSection() {
                   <p className="font-heading font-extrabold text-4xl md:text-5xl text-white mb-2">
                     <CountUp target={stat.number} /> +
                   </p>
-                  <p className="text-white/40 text-xs leading-relaxed whitespace-pre-line">
+                  <p className="text-white/70 text-xs leading-relaxed whitespace-pre-line">
                     {stat.label}
                   </p>
                 </div>
@@ -143,7 +142,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full mb-[60px]">
-        <div className="site-container">
+        <div className="container">
           <div className="flex flex-col lg:flex-row items-end justify-between gap-8">
 
             <div className="relative w-[260px] h-[160px] rounded-lg overflow-hidden shadow-2xl border border-white/10 shrink-0 hidden md:block">

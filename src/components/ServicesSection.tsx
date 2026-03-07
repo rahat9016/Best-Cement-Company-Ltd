@@ -30,7 +30,7 @@ export default function ServicesSection() {
 
   return (
     <section id="services" className="bg-white pt-[90px] pb-[80px]">
-      <div className="site-container">
+      <div className="container">
         <div className="text-center mb-12">
           <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">
             Our Services

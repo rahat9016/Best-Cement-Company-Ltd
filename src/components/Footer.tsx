@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer id="contact" className="bg-primary-dark pt-[70px]">
-      <div className="site-container">
+      <div className="container">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
           {/* About */}
           <div>

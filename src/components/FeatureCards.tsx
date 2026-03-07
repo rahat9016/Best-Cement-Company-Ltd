@@ -24,7 +24,7 @@ export default function FeatureCards() {
 
   return (
     <section className="bg-light pt-[90px] pb-[80px]">
-      <div className="site-container">
+      <div className="container">
         <div className="text-center mb-12">
           <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">
             Our Core Values
