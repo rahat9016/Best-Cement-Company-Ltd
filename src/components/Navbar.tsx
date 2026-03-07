@@ -42,7 +42,7 @@ export default function Navbar() {
               scrolled ? "text-primary" : "text-white"
             }`}
           >
-            Concretize
+            Best Cement Company Ltd
           </span>
         </Link>
 

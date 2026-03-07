@@ -3,19 +3,19 @@ import { Clock, Shield, Star } from "lucide-react";
 export default function FeatureCards() {
   const features = [
     {
-      icon: <Shield size={28} className="text-primary" />,
+      icon: <Shield size={28} className="text-white" />,
       title: "Safety First",
       description:
         "Every project follows strict safety protocols and industry standards to protect our workers and clients.",
     },
     {
-      icon: <Star size={28} className="text-primary" />,
+      icon: <Star size={28} className="text-white" />,
       title: "Honest & Transparent",
       description:
         "We believe in clear communication, fair pricing, and complete transparency throughout every project.",
     },
     {
-      icon: <Clock size={28} className="text-primary" />,
+      icon: <Clock size={28} className="text-white" />,
       title: "On-Time Delivery",
       description:
         "We deliver projects on schedule without compromising quality. Deadlines are commitments we honor.",
@@ -37,15 +37,15 @@ export default function FeatureCards() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-dark rounded-lg p-8 group hover:-translate-y-2 transition-all duration-300"
+              className="bg-primary rounded-lg p-8 group hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+              <div className="w-14 h-14 rounded-lg bg-white/20 flex items-center justify-center mb-5">
                 {feature.icon}
               </div>
               <h3 className="font-heading font-bold text-xl text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-white/80 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>
