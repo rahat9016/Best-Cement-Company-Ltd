@@ -54,6 +54,20 @@ function CountUp({ target, duration = 2000 }: { target: number; duration?: numbe
   return <span ref={ref}>{count}</span>;
 }
 
+{/* <div className="flex gap-2 mt-6">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                  className={`h-1 rounded-full transition-all duration-500 ${i === current
+                      ? "w-8 bg-primary"
+                      : "w-4 bg-white/30 hover:bg-white/50"
+                    }`}
+                />
+              ))}
+            </div> */}
+
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
 
@@ -69,14 +83,13 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col overflow-hidden"
+      className="relative min-h-screen flex flex-col overflow-hidden justify-center"
     >
       {slides.map((slide, i) => (
         <div
           key={slide.image}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${
-            i === current ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${i === current ? "opacity-100" : "opacity-0"
+            }`}
         >
           <Image
             src={slide.image}
@@ -89,95 +102,76 @@ export default function HeroSection() {
         </div>
       ))}
 
-      {/* Content inside container */}
-      <div className="relative z-10 container flex-1 flex flex-col justify-center items-start">
-        <div className="flex items-center gap-8 lg:gap-14 py-16 lg:py-0">
-          {/* Left vertical label */}
-          <div className="hidden lg:flex flex-col items-center pt-4">
-            <div className="w-px h-10 bg-primary mb-4" />
-            <p
-              className="text-[10px] font-heading font-semibold tracking-[0.25em] text-white/60 uppercase"
-              style={{ writingMode: "vertical-lr" }}
-            >
-              Concrete Construction You Can Trust
-            </p>
-          </div>
-
-          {/* Center content */}
-          <div className="max-w-4xl">
-            <h1 className="font-heading font-extrabold text-[42px] md:text-[52px] lg:text-[64px] leading-[1.1] text-white mb-6">
-              Residential &amp;<br />
-              Commercial Solutions Built To Last
-            </h1>
-            <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-lg mb-8">
-              We deliver expert concrete services including driveways, slabs,
-              and foundations — backed by years of experience, safety
-              compliance, and guaranteed quality.
-            </p>
-            <Link
-              href="#contact"
-              className="inline-flex items-center px-12 py-3.5 bg-primary text-white font-heading font-bold text-sm rounded-md hover:bg-primary-dark transition-colors duration-300 h-12"
-            >
-              Get a Free Quote
-            </Link>
-
-            <div className="flex gap-6 md:gap-10 mt-10">
-              {[
-                { number: 25, label: "Skilled Construction\nWorkers" },
-                { number: 15, label: "Years of Industry\nExperience" },
-                { number: 95, label: "Commercial Sites\nServed" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <p className="font-heading font-extrabold text-4xl md:text-5xl text-white mb-2">
-                    <CountUp target={stat.number} /> +
-                  </p>
-                  <p className="text-white/70 text-xs leading-relaxed whitespace-pre-line">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+      <div className="container flex flex-col lg:flex-row justify-between gap-8">
+        <div id="hero-content" className="relative z-10 lg:w-3/4 flex flex-col justify-end items-start">
+          <div className="flex items-center gap-8 lg:gap-14 py-16 lg:py-0">
+            <div className="hidden lg:flex flex-col items-center pt-4">
+              <div className="w-px h-10 bg-primary mb-4" />
+              <p
+                className="text-[10px] font-heading font-semibold tracking-[0.25em] text-white/60 uppercase"
+                style={{ writingMode: "vertical-lr" }}
+              >
+                Concrete Construction You Can Trust
+              </p>
             </div>
-          </div>
-        </div>
-      </div>
+            <div className="max-w-4xl">
+              <h1 className="font-heading font-extrabold text-[42px] md:text-[52px] lg:text-[64px] leading-[1.1] text-white mb-6">
+                Residential &amp;<br />
+                Commercial Solutions Built To Last
+              </h1>
+              <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-lg mb-8">
+                We deliver expert concrete services including driveways, slabs,
+                and foundations — backed by years of experience, safety
+                compliance, and guaranteed quality.
+              </p>
+              <Link
+                href="#contact"
+                className="inline-flex items-center px-12 py-3.5 bg-primary text-white font-heading font-bold text-sm rounded-md hover:bg-primary-dark transition-colors duration-300 h-12"
+              >
+                Get a Free Quote
+              </Link>
 
-      <div className="relative z-10 w-full mb-[60px]">
-        <div className="container">
-          <div className="flex flex-col lg:flex-row items-end justify-between gap-8">
-
-            <div className="relative w-[260px] h-[160px] rounded-lg overflow-hidden shadow-2xl border border-white/10 shrink-0 hidden md:block">
-              <Image
-                src="/images/hero-card.png"
-                alt="Construction workers reviewing blueprints"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-dark/40" />
-              <div className="absolute bottom-3 left-0 right-0 text-center">
-                <a
-                  href="#projects"
-                  className="text-white text-sm font-heading font-semibold hover:text-primary transition-colors inline-flex items-center gap-1"
-                >
-                  View Our Projects
-                  <ArrowRight size={14} />
-                </a>
+              <div className="flex gap-6 md:gap-10 mt-10">
+                {[
+                  { number: 25, label: "Skilled Construction\nWorkers" },
+                  { number: 15, label: "Years of Industry\nExperience" },
+                  { number: 95, label: "Commercial Sites\nServed" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <p className="font-heading font-extrabold text-4xl md:text-5xl text-white mb-2">
+                      <CountUp target={stat.number} /> +
+                    </p>
+                    <p className="text-white/70 text-xs leading-relaxed whitespace-pre-line">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
+        </div>
+        <div id="hero-image" className="relative z-10 lg:w-1/4 flex flex-col justify-end">
+          <div >
+            <div className="relative w-[260px] h-[160px] rounded-lg overflow-hidden shadow-2xl border border-white/10 shrink-0 hidden md:block">
+                <Image
+                  src="/images/hero-card.png"
+                  alt="Construction workers reviewing blueprints"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-dark/40" />
+                <div className="absolute bottom-3 left-0 right-0 text-center">
+                  <a
+                    href="#projects"
+                    className="text-white text-sm font-heading font-semibold hover:text-primary transition-colors inline-flex items-center gap-1"
+                  >
+                    View Our Projects
+                    <ArrowRight size={14} />
+                  </a>
+                </div>
+              </div>
 
-          <div className="flex gap-2 mt-6">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                className={`h-1 rounded-full transition-all duration-500 ${
-                  i === current
-                    ? "w-8 bg-primary"
-                    : "w-4 bg-white/30 hover:bg-white/50"
-                }`}
-              />
-            ))}
+
           </div>
         </div>
       </div>
