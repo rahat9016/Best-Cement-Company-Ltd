@@ -26,38 +26,38 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="bg-light pt-[90px] pb-[80px]">
+    <section className="bg-light pt-16 pb-14 md:pt-[90px] md:pb-[80px]">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Content */}
           <div>
             <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">
               Why Choose Us
             </p>
-            <h2 className="font-heading font-bold text-3xl md:text-[40px] leading-tight text-text mb-6">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-[40px] leading-tight text-text mb-4 md:mb-6">
               Built On Trust, Driven<br />By Results
             </h2>
-            <p className="text-text-muted text-base leading-relaxed mb-8">
+            <p className="text-text-muted text-sm sm:text-base leading-relaxed mb-6 md:mb-8">
               We combine modern construction techniques with old-fashioned
               craftsmanship. Our commitment to quality, safety, and customer
               satisfaction sets us apart from the competition.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-2 gap-3 sm:gap-5">
               {reasons.map((reason) => (
                 <div
                   key={reason.title}
-                  className="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white rounded-lg p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                  <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
                       <Check size={14} className="text-primary" strokeWidth={3} />
                     </div>
-                    <h3 className="font-heading font-bold text-sm text-text">
+                    <h3 className="font-heading font-bold text-xs sm:text-sm text-text">
                       {reason.title}
                     </h3>
                   </div>
-                  <p className="text-text-muted text-xs leading-relaxed pl-11">
+                  <p className="text-text-muted text-[10px] sm:text-xs leading-relaxed pl-9 sm:pl-11">
                     {reason.description}
                   </p>
                 </div>

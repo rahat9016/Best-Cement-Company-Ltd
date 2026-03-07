@@ -33,12 +33,12 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between h-[80px]">
+      <div className="container flex items-center justify-between h-[60px] sm:h-[70px] lg:h-[80px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <Leaf size={28} className="text-primary" fill="#009dab" />
+        <Link href="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          <Leaf size={24} className="text-primary sm:w-7 sm:h-7" fill="#009dab" />
           <span
-            className={`font-heading font-bold text-xl tracking-tight transition-colors duration-300 ${
+            className={`font-heading font-bold text-sm sm:text-lg lg:text-xl tracking-tight transition-colors duration-300 ${
               scrolled ? "text-primary" : "text-white"
             }`}
           >
@@ -47,12 +47,12 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-7">
           {navLinks.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className={`text-base font-medium transition-colors duration-300 flex items-center gap-1 ${
+              className={`text-sm xl:text-base font-medium transition-colors duration-300 flex items-center gap-1 ${
                 item.active
                   ? "text-primary"
                   : scrolled
@@ -61,7 +61,6 @@ export default function Navbar() {
               }`}
             >
               {item.label}
-              
             </Link>
           ))}
         </div>
@@ -69,7 +68,7 @@ export default function Navbar() {
         {/* CTA Button */}
         <Link
           href="#contact"
-          className={`hidden lg:inline-flex items-center px-7 py-3 font-heading font-semibold text-sm rounded-full transition-all duration-300 ${
+          className={`hidden lg:inline-flex items-center px-5 xl:px-7 py-2.5 xl:py-3 font-heading font-semibold text-sm rounded-full transition-all duration-300 ${
             scrolled
               ? "bg-primary text-white hover:bg-primary-dark"
               : "bg-primary text-white hover:bg-primary-dark"
@@ -120,11 +119,8 @@ export default function Navbar() {
           ))}
           <Link
             href="#contact"
-            className={`mt-4 inline-flex items-center px-7 py-3 font-heading font-semibold text-sm rounded-full border ${
-              scrolled
-                ? "bg-primary text-white border-primary"
-                : "bg-primary text-white border-primary"
-            }`}
+            onClick={() => setIsOpen(false)}
+            className="mt-4 inline-flex items-center px-7 py-3 font-heading font-semibold text-sm rounded-full border bg-primary text-white border-primary"
           >
             Talk to Our Team
           </Link>

@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-white pt-[90px] pb-[80px]">
+    <section id="about" className="bg-white pt-16 pb-14 md:pt-[90px] md:pb-[80px]">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Image */}
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-xl">
@@ -18,9 +18,9 @@ export default function AboutSection() {
               />
             </div>
             {/* Experience badge */}
-            <div className="absolute -bottom-6 -right-4 md:right-6 bg-primary text-white px-6 py-4 rounded-lg shadow-lg">
-              <p className="font-heading font-extrabold text-3xl">25+</p>
-              <p className="font-heading font-semibold text-xs">Years of Experience</p>
+            <div className="absolute -bottom-4 right-4 sm:-bottom-6 md:right-6 bg-primary text-white px-4 py-3 sm:px-6 sm:py-4 rounded-lg shadow-lg">
+              <p className="font-heading font-extrabold text-2xl sm:text-3xl">25+</p>
+              <p className="font-heading font-semibold text-[10px] sm:text-xs">Years of Experience</p>
             </div>
           </div>
 
@@ -29,17 +29,17 @@ export default function AboutSection() {
             <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">
               About Us
             </p>
-            <h2 className="font-heading font-bold text-3xl md:text-[40px] leading-tight text-text mb-6">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-[40px] leading-tight text-text mb-4 md:mb-6">
               Experts in Company With Over a Decade of Proven Results
             </h2>
-            <p className="text-text-muted text-base leading-relaxed mb-6">
+            <p className="text-text-muted text-sm sm:text-base leading-relaxed mb-4 md:mb-6">
               With over two decades of experience, Best Cement Company Ltd has evolved from
               a small local contractor to a full-service construction company.
               We specialize in both residential and commercial projects,
               delivering exceptional craftsmanship and attention to detail on
               every build.
             </p>
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-3 mb-6 md:mb-8">
               {[
                 "Licensed & insured professionals",
                 "Transparent pricing with no hidden fees",
@@ -56,7 +56,7 @@ export default function AboutSection() {
             </ul>
             <a
               href="#contact"
-              className="inline-flex items-center px-8 py-3.5 bg-primary text-white font-heading font-bold text-sm rounded-md hover:bg-primary-dark transition-colors duration-300"
+              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-3.5 bg-primary text-white font-heading font-bold text-sm rounded-md hover:bg-primary-dark transition-colors duration-300"
             >
               Discover More
             </a>

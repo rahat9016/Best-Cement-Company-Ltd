@@ -20,50 +20,50 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="relative bg-light pt-[90px] pb-[80px]">
+    <section id="projects" className="relative bg-light pt-16 pb-14 md:pt-[90px] md:pb-[80px]">
       {/* Angled top separator */}
       <div
-        className="absolute top-0 left-0 w-full h-16 bg-white"
+        className="absolute top-0 left-0 w-full h-10 md:h-16 bg-white"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 100%)" }}
       />
 
       <div className="container">
         {/* Header row */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-8 md:mb-12">
           <div>
             <p className="text-primary font-heading font-semibold text-sm tracking-wider uppercase mb-3">
               Our Projects
             </p>
-            <h2 className="font-heading font-bold text-3xl md:text-[40px] leading-tight text-text">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-[40px] leading-tight text-text">
               Built To Last,<br />
               Delivered On Time
             </h2>
           </div>
           {/* Stats */}
-          <div className="flex gap-8 mt-6 md:mt-0">
+          <div className="flex gap-6 sm:gap-8 mt-6 md:mt-0">
             {[
               { number: "189+", label: "Projects Done" },
               { number: "77+", label: "Happy Clients" },
               { number: "85+", label: "Awards Won" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="font-heading font-extrabold text-2xl md:text-3xl text-primary">
+                <p className="font-heading font-extrabold text-xl sm:text-2xl md:text-3xl text-primary">
                   {stat.number}
                 </p>
-                <p className="text-text-muted text-xs mt-1">{stat.label}</p>
+                <p className="text-text-muted text-[10px] sm:text-xs mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Project Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {projects.map((project) => (
             <div
               key={project.title}
               className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-44 sm:h-56 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -74,11 +74,11 @@ export default function ProjectsSection() {
                   {project.category}
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-heading font-bold text-lg text-text mb-2">
+              <div className="p-4 sm:p-6">
+                <h3 className="font-heading font-bold text-base sm:text-lg text-text mb-2">
                   {project.title}
                 </h3>
-                <p className="text-text-muted text-sm">
+                <p className="text-text-muted text-xs sm:text-sm">
                   Completed with excellence and delivered ahead of schedule.
                 </p>
               </div>
