@@ -5,9 +5,11 @@ import FeatureCards from "@/components/FeatureCards";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
+import ProductsSection from "@/components/ProductsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ServicesSection from "@/components/ServicesSection";
 import Testimonials from "@/components/Testimonials";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
@@ -16,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <ProductsSection />
         <FeatureCards />
         <AboutSection />
         <ProjectsSection />
@@ -26,6 +29,7 @@ export default function Home() {
         <BlogSection />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
