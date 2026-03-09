@@ -12,7 +12,7 @@ const services = [
   },
   {
     icon: <Droplets size={30} className="text-primary" />,
-    title: "Admixture",
+    title: "Admixture (Construction chemical)",
     highlight: null,
     category: null,
     details: [
