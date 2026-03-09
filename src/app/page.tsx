@@ -1,5 +1,6 @@
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
+import CareerSection from "@/components/CareerSection";
 import CTASection from "@/components/CTASection";
 import FactorySection from "@/components/FactorySection";
 import FeatureCards from "@/components/FeatureCards";
@@ -22,6 +23,7 @@ export default function Home() {
         <ProductsSection />
         <FeatureCards />
         <AboutSection />
+        <CareerSection />
         <ProjectsSection />
         <ServicesSection />
         <WhyChooseUs />
