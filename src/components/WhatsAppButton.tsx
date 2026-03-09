@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "8801785666746"; // Bangladesh country code + number
+  const phoneNumber = "8801611005047"; // Bangladesh country code + number
   const url = `https://wa.me/${phoneNumber}`;
 
   return (
