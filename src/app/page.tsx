@@ -1,6 +1,7 @@
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
 import CTASection from "@/components/CTASection";
+import FactorySection from "@/components/FactorySection";
 import FeatureCards from "@/components/FeatureCards";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -28,6 +29,7 @@ export default function Home() {
         <Testimonials />
         <BlogSection />
       </main>
+      <FactorySection />
       <Footer />
       <WhatsAppButton />
     </>

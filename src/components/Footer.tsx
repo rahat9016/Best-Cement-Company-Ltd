@@ -22,17 +22,20 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                <Facebook key="fb" size={16} />,
-                <Twitter key="tw" size={16} />,
-                <Instagram key="ig" size={16} />,
-                <Linkedin key="li" size={16} />,
-              ].map((icon, i) => (
+                { icon: <Facebook key="fb" size={16} />, href: "https://www.facebook.com/VIPCementAdmixer" },
+                { icon: <Facebook key="fb2" size={16} />, href: "https://www.facebook.com/yeasinmizigroup" },
+                { icon: <Twitter key="tw" size={16} />, href: "#" },
+                { icon: <Instagram key="ig" size={16} />, href: "#" },
+                { icon: <Linkedin key="li" size={16} />, href: "#" },
+              ].map((item, i) => (
                 <Link
                   key={i}
-                  href="#"
+                  href={item.href}
+                  target={item.href !== "#" ? "_blank" : undefined}
+                  rel={item.href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-8 h-8 sm:w-9 sm:h-9 bg-white rounded-lg flex items-center justify-center text-primary hover:text-primary-dark transition-all duration-300"
                 >
-                  {icon}
+                  {item.icon}
                 </Link>
               ))}
             </div>
@@ -99,8 +102,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Facebook className="shrink-0 text-white" size={16} />
-                <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white text-xs sm:text-sm hover:text-white transition-colors">
+                <Link href="https://www.facebook.com/VIPCementAdmixer" target="_blank" rel="noopener noreferrer" className="text-white text-xs sm:text-sm hover:text-white transition-colors">
                   V.I.P Cement &amp; Admixture
+                </Link>
+              </li>
+              <li className="flex items-center gap-3">
+                <Facebook className="shrink-0 text-white" size={16} />
+                <Link href="https://www.facebook.com/yeasinmizigroup" target="_blank" rel="noopener noreferrer" className="text-white text-xs sm:text-sm hover:text-white transition-colors">
+                  A sister concern of Yeasin Mizi Group
                 </Link>
               </li>
               <li className="flex items-center gap-3">
