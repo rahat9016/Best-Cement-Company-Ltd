@@ -14,29 +14,29 @@ const products = [
   },
   {
     name: "V.I.P Cement",
-    type: "Portland Composite Cement",
+    type: "Specialized Cement",
     spec: "More Durable • Stronger than Strong",
     weight: "50 kg",
-    image: "/images/product-vip-cement.png",
+    image: "/images/product-cement-promo-1.jpg",
   },
   {
     name: "V.I.P Cement",
     type: "Portland Composite Cement",
-    spec: "High Strength • Eco-Friendly",
+    spec: "High Quality • Made in Bangladesh",
     weight: "50 kg",
-    image: "/images/product-vip-cement.png",
+    image: "/images/product-cement-promo-2.jpg",
+  },
+  {
+    name: "V.I.P Admixture & Paint",
+    type: "Construction Chemical & Building Materials",
+    spec: "American Technology • Premium Quality",
+    weight: "5L / 10L / 20L / 25L",
+    image: "/images/product-admixture-paint.jpg",
   },
   {
     name: "V.I.P Cement",
     type: "Portland Composite Cement",
-    spec: "For All Construction Works",
-    weight: "50 kg",
-    image: "/images/product-vip-cement.png",
-  },
-  {
-    name: "V.I.P Cement",
-    type: "Portland Composite Cement",
-    spec: "Trusted Nationwide • Made in BD",
+    spec: "Trusted Nationwide • Eco-Friendly",
     weight: "50 kg",
     image: "/images/product-vip-cement.png",
   },
@@ -176,12 +176,15 @@ export default function ProductsSection() {
           align-items: center;
           justify-content: center;
           margin-bottom: 16px;
+          border-radius: 10px;
+          overflow: hidden;
         }
         .products-carousel__card-img img {
           max-width: 100%;
           max-height: 100%;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
-          filter: drop-shadow(0 8px 20px rgba(0,0,0,0.12));
           transition: transform 0.35s ease;
         }
         .products-carousel__card:hover .products-carousel__card-img img {

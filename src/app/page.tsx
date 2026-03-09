@@ -2,6 +2,7 @@ import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
 import BusinessPartnerSection from "@/components/BusinessPartnerSection";
 import CareerSection from "@/components/CareerSection";
+import CEOSection from "@/components/CEOSection";
 import CTASection from "@/components/CTASection";
 import FactorySection from "@/components/FactorySection";
 import FeatureCards from "@/components/FeatureCards";
@@ -29,6 +30,7 @@ export default function Home() {
         <ServicesSection />
         <WhyChooseUs />
         <CTASection />
+        <CEOSection />
         <Testimonials />
         <BlogSection />
       </main>
