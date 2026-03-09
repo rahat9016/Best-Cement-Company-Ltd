@@ -1,4 +1,5 @@
-import { Building2, Facebook, Globe, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Facebook, Globe, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,12 +10,13 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4 md:mb-5">
-              <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-                <Building2 size={18} strokeWidth={2.5} className="text-white" />
-              </div>
-              <span className="text-white font-heading font-bold text-base sm:text-lg">
-                Best Cement Company Ltd
-              </span>
+              <Image
+                src="/images/best-cement-logo.png"
+                alt="Best Cement Company Ltd"
+                width={160}
+                height={50}
+                className="h-[40px] sm:h-[45px] w-auto object-contain"
+              />
             </div>
             <p className="text-white text-xs sm:text-sm leading-relaxed mb-4 md:mb-5">
               Building your vision with precision and excellence since 1998.

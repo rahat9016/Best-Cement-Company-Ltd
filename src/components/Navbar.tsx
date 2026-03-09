@@ -1,6 +1,7 @@
 "use client";
 
-import { Leaf, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -35,15 +36,20 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-[60px] sm:h-[70px] lg:h-[80px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-          <Leaf size={24} className="text-primary sm:w-7 sm:h-7" fill="#009dab" />
-          <span
-            className={`font-heading font-bold text-sm sm:text-lg lg:text-xl tracking-tight transition-colors duration-300 ${
-              scrolled ? "text-primary" : "text-white"
-            }`}
-          >
-            Best Cement Company Ltd
-          </span>
+        <Link
+          href="/"
+          className={`flex items-center shrink-0 rounded-lg transition-all duration-300 ${
+            scrolled ? "bg-primary px-3 py-1.5" : ""
+          }`}
+        >
+          <Image
+            src="/images/best-cement-logo.png"
+            alt="Best Cement Company Ltd"
+            width={180}
+            height={60}
+            className="h-[40px] sm:h-[50px] lg:h-[55px] w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav Links */}
