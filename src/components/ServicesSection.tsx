@@ -39,7 +39,7 @@ const services = [
   {
     icon: <Hammer size={30} className="text-primary" />,
     title: "Steel (Rod)",
-    highlight: null,
+    highlight: "We sale and serve different kind of Rod from different factories and mills all over the country & our available product size:",
     category: null,
     details: ["8mm", "10mm", "12mm", "16mm", "20mm"],
     facebookUrl: "https://www.facebook.com/VIPCementAdmixer",

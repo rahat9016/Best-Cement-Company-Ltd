@@ -1,5 +1,6 @@
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
+import BusinessPartnerSection from "@/components/BusinessPartnerSection";
 import CareerSection from "@/components/CareerSection";
 import CTASection from "@/components/CTASection";
 import FactorySection from "@/components/FactorySection";
@@ -32,6 +33,7 @@ export default function Home() {
         <BlogSection />
       </main>
       <FactorySection />
+      <BusinessPartnerSection />
       <Footer />
       <WhatsAppButton />
     </>
