@@ -5,13 +5,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const products = [
-  {
-    name: "V.I.P Cement",
-    type: "Portland Composite Cement",
-    spec: "BDS EN 197-1:2003, CEM II/A-M 42.5N",
-    weight: "50 kg",
-    image: "/images/product-vip-cement.png",
-  },
+  
   {
     name: "V.I.P Cement",
     type: "Specialized Cement",
@@ -26,19 +20,34 @@ const products = [
     weight: "50 kg",
     image: "/images/product-cement-promo-2.jpg",
   },
+
+  {
+    name: "V.I.P Admixture",
+    type: "Construction Chemical",
+    spec: "Strong & Long-Lasting • bestcementbd.com",
+    weight: "5L / 10L / 20L",
+    image: "/images/img2.png",
+  },
   {
     name: "V.I.P Admixture & Paint",
     type: "Construction Chemical & Building Materials",
     spec: "American Technology • Premium Quality",
     weight: "5L / 10L / 20L / 25L",
-    image: "/images/product-admixture-paint.jpg",
+    image: "/images/img3.png",
   },
   {
     name: "V.I.P Cement",
     type: "Portland Composite Cement",
     spec: "Trusted Nationwide • Eco-Friendly",
     weight: "50 kg",
-    image: "/images/product-vip-cement.png",
+    image: "/images/img4.png",
+  },
+  {
+    name: "V.I.P Admixture",
+    type: "Construction Chemical",
+    spec: "Strong & Long-Lasting • bestcementbd.com",
+    weight: "5L / 10L / 20L",
+    image: "/images/admixture-overview.jpg",
   },
 ];
 

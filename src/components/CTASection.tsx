@@ -34,7 +34,7 @@ export default function CTASection() {
             Start Your Project
           </a>
           <a
-            href="tel:+1234567890"
+            href="tel:+8801611005047"
             className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5 border border-white/20 text-white font-heading font-semibold text-sm rounded-md hover:border-primary hover:text-primary transition-colors duration-300"
           >
             <Phone className="mr-2" size={16} />

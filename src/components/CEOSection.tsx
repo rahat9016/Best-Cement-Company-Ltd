@@ -41,16 +41,19 @@ export default function CEOSection() {
             <Quote size={40} className="text-primary/20 mb-4 rotate-180" />
             <div className="space-y-4 text-text-muted text-sm sm:text-base leading-relaxed">
               <p>
-                I am deeply honored to lead <strong>Best Cement Company Ltd.</strong> — a company built on the foundation of quality, trust, and service to the nation. Our journey has been driven by a singular vision: to deliver construction materials that truly stand the test of time.
+                I am deeply honoured to lead <strong>Best Cement Company Ltd.</strong> — a company built on the foundation of quality, trust, management, and service. Our journey has been driven by building materials such as <strong>Cement, Construction Chemicals, Paint &amp; Steel</strong> that truly stand the test of time.
               </p>
               <p>
-                At V.I.P Cement, we believe that quality should never be compromised. That is why our Portland Composite Cement is manufactured to the highest <strong>CEM II/A-M, 42.5N</strong> standards — because the people of Bangladesh deserve nothing less than the best for their homes, buildings, and dreams.
+                It goes without saying that this journey was never easy. At every step, we faced immense challenges and difficult experiences. However, despite all the obstacles, we never sat idle. Instead, we tried more and more, approaching every problem creatively until we found alternative solutions — time and again. Today, we proudly offer three product brands: <strong>★ V.I.P Specialized Cement</strong>, <strong>★ V.I.P Admixture</strong>, and <strong>★ V.I.P Premium Paint</strong>. Additionally, by sourcing from various renowned companies, we distribute different kinds of steel across the entire country.
               </p>
               <p>
-                We are not striving to become the biggest brand in the market. Our aim is to be <strong>unique</strong> — to create employment opportunities, to serve the nation with integrity, and to build a legacy of trust that lasts for generations.
+                We do not strive to become the biggest or the No. 1 brand in the market. Our aim is to <strong>survive in the market</strong> and create a workspace for the unemployed young generation in our country to the best of our ability — and to contribute meaningfully to our nation.
+              </p>
+              <p>
+                Finally, I want to extend my heartfelt thanks to all of my beloved colleagues, business partners, customers, retailers, distributors, and well-wishers. Your support has been invaluable, and I congratulate each one of you with great warmth!
               </p>
               <p className="font-heading font-semibold text-text text-base sm:text-lg italic">
-                &ldquo;We don&apos;t want to be No.1 brand — we want to be Unique. Quality that lasts is our promise.&rdquo;
+                &ldquo;We don&apos;t want to be No. 1 — we want to be Unique. Quality, trust, and service are our promise.&rdquo;
               </p>
             </div>
             <div className="mt-6 pt-5 border-t border-gray-100">

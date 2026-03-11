@@ -7,16 +7,24 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const slides = [
   {
-    image: "/images/hero.png",
-    alt: "Concrete construction site aerial view",
+    image: "/images/hero-factory-1.png",
+    alt: "Aerial view of cement factory with green mountains",
   },
   {
-    image: "/images/cta-bg.png",
-    alt: "Construction site at sunset with cranes",
+    image: "/images/hero-factory-2.png",
+    alt: "Interior of raw material storage facility",
   },
   {
-    image: "/images/about.png",
-    alt: "Building under construction with steel beams",
+    image: "/images/hero-factory-3.png",
+    alt: "Modern cement plant with dome silos",
+  },
+  {
+    image: "/images/hero-factory-4.png",
+    alt: "Industrial cement factory with smokestacks",
+  },
+  {
+    image: "/images/hero-factory-5.png",
+    alt: "Cement factory complex with tower silo",
   },
 ];
 

@@ -1,4 +1,4 @@
-import { Check, Droplets, Eye, Heart } from "lucide-react";
+import { Check, Droplets, Paintbrush } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutSection() {
@@ -96,10 +96,10 @@ export default function AboutSection() {
               </p>
             </div>
             <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-[36px] leading-tight text-text mb-4 md:mb-6">
-              V.I.P Construction Chemical &amp; Building Materials
+              V.I.P Construction Chemical
             </h2>
             <p className="text-text-muted text-sm sm:text-base leading-relaxed mb-4">
-              V.I.P Construction Chemical and Building Materials is one of the Best Cement Company products in Bangladesh. We have two qualities of admixture: <strong>V.I.P Ultra-Strong Chemical</strong> and <strong>V.I.P Specialized Admixture</strong>. We ensure the highest quality and best service.
+              V.I.P Construction Chemical is one of the Best Cement Company products in Bangladesh. We have two qualities of admixture: <strong>V.I.P Ultra-Strong Chemical</strong> and <strong>V.I.P Specialized Admixture</strong>. We ensure the highest quality and best service.
             </p>
             <p className="text-text-muted text-sm sm:text-base leading-relaxed mb-4">
               V.I.P Admixture keeps contribution in a building like damp proofing, water proofing, water reducing, hair cracks repair, heat proving, making structures stronger and so on.
@@ -122,30 +122,65 @@ export default function AboutSection() {
             </ul>
           </div>
 
-          {/* Vision & Hope cards (right) */}
-          <div className="space-y-5">
-            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 sm:p-7">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Eye size={20} className="text-primary" />
-                </div>
-                <h3 className="font-heading font-bold text-lg text-text">Our Vision</h3>
-              </div>
-              <p className="text-text-muted text-sm sm:text-base leading-relaxed">
-                Our vision is to serve high-quality products and ensure user satisfaction. V.I.P Construction Chemical operates from two factories — in <strong>Gazipur</strong> and <strong>Chandpur</strong>.
+          {/* Admixture Product Image (right) */}
+          <div className="relative">
+            <div className="rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/images/vip-admixture-flyer.png"
+                alt="V.I.P Construction Chemical — Admixture Product Overview"
+                width={560}
+                height={720}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-16 md:mb-24 gap-10 lg:gap-16">
+          <div>
+            <div className="inline-flex items-center gap-2 text-primary mb-3">
+              <Paintbrush size={20} />
+              <p className="font-heading font-semibold text-sm tracking-wider uppercase">
+                About Our Paint
               </p>
             </div>
-
-            <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 sm:p-7">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Heart size={20} className="text-primary" />
-                </div>
-                <h3 className="font-heading font-bold text-lg text-text">Our Hope</h3>
-              </div>
-              <p className="text-text-muted text-sm sm:text-base leading-relaxed">
-                Our product will protect your dream investment and change your house quality, grow your self-confidence and trust, and make a well contribution for the people as well as for the nation.
-              </p>
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-[36px] leading-tight text-text mb-4 md:mb-6">
+              V.I.P Premium Quality Paint
+            </h2>
+            <p className="text-text-muted text-sm sm:text-base leading-relaxed mb-4">
+              <strong>Best Cement Company Ltd.</strong> has launched its own paint product under the name <strong>V.I.P Premium Quality Paint</strong>, manufactured using well-known Indian chemist formulations combined with the expertise of our in-house chemists.
+            </p>
+            <p className="text-text-muted text-sm sm:text-base leading-relaxed mb-4">
+              Our paint is environmentally friendly and maintains up-to-the-mark quality. We hope our product will earn goodwill and build the trust of our customers across the entire country.
+            </p>
+            <p className="text-text-muted text-sm sm:text-base leading-relaxed mb-6 ">
+              We want to assure our customers, retailers, and dealers that one day V.I.P Paint will be a well-known and trusted product among all our clients and partners.
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                "Formulated with renowned Indian chemist expertise",
+                "Environmentally friendly & premium quality",
+                "Designed to earn long-lasting customer trust",
+                "Available for residential & commercial use",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-text text-sm">
+                  <span className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <Check size={12} className="text-primary" strokeWidth={3} />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="relative">
+            <div className="rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/images/image.png"
+                alt="V.I.P Premium Quality Paint"
+                width={560}
+                height={560}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>

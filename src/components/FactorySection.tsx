@@ -1,4 +1,5 @@
 import { Factory, MapPin, Phone, Star } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function FactorySection() {
@@ -23,9 +24,17 @@ export default function FactorySection() {
           <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-[40px] leading-tight text-white mb-4">
             Factory Locations
           </h2>
-          <p className="text-white/50 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            আমারা ঢাকা ও চিটাগং শহরের মানসম্মত সিমেন্ট ফ্যাক্টরি থেকে বিশেষভাবে অর্ডার করে প্যাকেটজাতকরে বাজারজাত করা হয়।
-          </p>
+        </div>
+
+        {/* Company Logo */}
+        <div className="flex justify-center mb-10 md:mb-14">
+          <Image
+            src="/images/best-cement-logo.png"
+            alt="Best Cement Company Ltd — Quality Is Our Identity"
+            width={320}
+            height={400}
+            className="w-auto h-auto max-h-[280px] sm:max-h-[340px] object-contain"
+          />
         </div>
 
         {/* Factory Cards */}
